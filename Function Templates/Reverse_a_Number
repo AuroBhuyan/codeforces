@@ -1,0 +1,13 @@
+// Returns Reverse of a number
+long long reverseNum(long long n) {
+    bool neg = (n < 0);
+    n = abs(n);
+
+    long long rev = 0;
+    while (n) {
+        rev = rev * 10 + (n % 10);
+        n /= 10;
+    }
+
+    return neg ? -rev : rev;
+}
